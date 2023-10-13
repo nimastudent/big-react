@@ -94,3 +94,39 @@ conventional 规范集意义：
 // 提交的类型
 <type>: <subject> 
 ```
+常用`type`值如下：
+- `feat`:添加新功能
+- `fix`
+- `chore`:一些不影响功能的修改
+- `docs`
+- `perf`
+- `refatcor`:重构
+- `test`
+
+初始化`tsconfig.json`
+```json
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "module": "ESNext",
+        "lib": ["ESNext","DOM"],
+        "moduleResolution": "Node",
+        "strict": true,
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "noEmit": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": false,
+        "skipLibCheck": true,
+        "baseUrl": "./packages"
+    }
+}
+```
+
+ 项目打包工具
+ `pnpm i -D -w rollup`
